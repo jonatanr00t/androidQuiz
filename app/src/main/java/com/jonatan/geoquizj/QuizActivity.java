@@ -81,6 +81,13 @@ public class QuizActivity extends AppCompatActivity {
         Log.d(TAG, "Se llamó a onCreate(Bundle)");
         setContentView(R.layout.activity_quiz);
 
+        if (savedInstanceState != null) {
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+        }
+
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        updateQuestion();
+
         mCheatButton = (Button) findViewById(R.id.cheat_button);
         mCheatButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,13 +101,6 @@ public class QuizActivity extends AppCompatActivity {
                 startActivityForResult(i, REQUEST_CODE_CHEAT);
             }
         });
-
-        if (savedInstanceState != null) {
-            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
-        }
-
-        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
-        updateQuestion();
 
         mTrueButton = (Button) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
