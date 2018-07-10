@@ -26,6 +26,7 @@ public class CheatActivity extends AppCompatActivity {
 
     private TextView mAnswerTextView;
     private Button mShowAnswer;
+    private Button mVolverButton;
     private TextView mApiTextView;
 
 
@@ -91,6 +92,14 @@ public class CheatActivity extends AppCompatActivity {
                     mAnswerTextView.setVisibility(View.VISIBLE);
                     mShowAnswer.setVisibility(View.INVISIBLE);
                 }
+            }
+        });
+
+        mVolverButton = findViewById(R.id.volver_button);
+        mVolverButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CheatActivity.super.onBackPressed();
             }
         });
     }

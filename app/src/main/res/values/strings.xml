@@ -4,6 +4,7 @@
     <string name="false_button">FALSO</string>
     <string name="next_button">SIGUIENTE</string>
     <string name="previous_button">ANTERIOR</string>
+    <string name="volver_button">VOLVER</string>
     <!--<string name="question_text">¿Los ríos Paraná y Uruguay se unen?</string>-->
     <string name="correct_toast">¡Correcto! :)</string>
     <string name="incorrect_toast">Incorrecto :(</string>
@@ -16,4 +17,5 @@
     <string name="show_answer_button">Mostrar respuesta</string>
     <string name="cheat_button">Machete!</string>
     <string name="judgment_toast">Machetearse esta muy mal.</string>
+    <string name="judgment_toastError">Ni haciendo trampa lo hiciste bien.</string>
 </resources>
