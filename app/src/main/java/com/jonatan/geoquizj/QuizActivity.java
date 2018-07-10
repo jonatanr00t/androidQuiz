@@ -55,8 +55,13 @@ public class QuizActivity extends AppCompatActivity {
         int color = 0;
 
         if(mIsCheater){
-            messageResId = R.string.judgment_toast;
-            color = Color.BLACK;
+            if (eligioTrue == esTrue) {
+                messageResId = R.string.judgment_toast;
+                color = Color.BLACK;
+            } else {
+                messageResId = R.string.judgment_toastError;
+                color = Color.BLACK;
+            }
         }else {
             if (eligioTrue == esTrue) {
                 messageResId = R.string.correct_toast;
